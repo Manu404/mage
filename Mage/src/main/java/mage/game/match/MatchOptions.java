@@ -43,6 +43,7 @@ public class MatchOptions implements Serializable {
     protected boolean rated;
     protected int numSeatsForMatch;
     protected Set<String> bannedUsers = new HashSet<>();
+    protected boolean manaburn;
 
     /**
      * Time each player has during the game to play using his\her priority.
@@ -269,6 +270,14 @@ public class MatchOptions implements Serializable {
             return MulliganType.GAME_DEFAULT;
         }
         return mulliganType;
+    }
+    
+    public boolean isManaburnEnabled() {
+        return this.manaburn;
+    }
+
+    public void setManaBurnEnabled(boolean manaburn) {
+        this.manaburn = manaburn;
     }
 
 }
